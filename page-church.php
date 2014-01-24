@@ -30,7 +30,7 @@
 	                        <p><?php the_field('home_welcome_description'); ?></p>
 	                        <a href="https://maps.google.com/maps?q=2232+s.+Nogales+Avenue+Tulsa,+OK&hl=en&sll=36.152302,-95.87801&sspn=0.718543,1.19339&hnear=2232+S+Nogales+Ave,+Tulsa,+Oklahoma+74107&t=m&z=16&iwloc=A"class="button">Come Visit Us!</a>
 	                     <div class="give-wrap"> 
-	                     	<button class="button give-toggle" id="give-toggle">Online Giving</button>
+	                     	<button class="button give-toggle">Online Giving</button>
 		                     <form action="https://authorize.payments.amazon.com/pba/paypipeline" class="give" method="post">
 		                      	  <input type="hidden" name="returnUrl" value="http://westsideharvest.com/index.php/church">
 		                      	  <input type="hidden" name="processImmediate" value="1">
@@ -92,7 +92,7 @@
 	            		<section class="half-left">
 		            		<p> <?php the_field('about_description'); ?></p>
 		            		<div class="give-wrap"> 
-	                     	<button class="button give-toggle" id="give-toggle">Online Giving</button>
+	                     	<button class="button give-toggle">Online Giving</button>
 		                     <form action="https://authorize.payments.amazon.com/pba/paypipeline" class="give" method="post">
 		                      	  <input type="hidden" name="returnUrl" value="http://westsideharvest.com/index.php/church">
 		                      	  <input type="hidden" name="processImmediate" value="1">

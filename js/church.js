@@ -14,7 +14,7 @@
 			});
 		});
 	};
-	$("#give-toggle").click(function (event) {
+	$(".give-toggle").click(function (event) {
 		event.preventDefault();
 		$(this).parent('.give-wrap').toggleClass("slide-up");
 	});
