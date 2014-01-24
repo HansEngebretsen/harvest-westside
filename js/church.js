@@ -19,6 +19,15 @@
 		$(this).parent('.give-wrap').toggleClass("slide-up");
 	});
 
+	$(".button.give").click(function (event) {
+		var value = $(this).siblings(".amount-input").val();
+		var numValue = parseFloat(value || "0");
+		if (!value || isNaN(numValue) || numValue < 1) {
+			alert("Please enter a donation amount.");
+			event.preventDefault();
+		}
+	})
+
 	$(function () {
 
 		// grab the initial top offset of the navigation 
