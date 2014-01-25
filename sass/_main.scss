@@ -661,6 +661,11 @@ aside {
         color: rgba(white, 0.7);
         margin-bottom: 17px;
     }
+
+}
+
+.welcome a.button, .give-wrap button {
+	width: 176px;
 }
 
 .slider {
@@ -702,14 +707,17 @@ a.button:hover {
 }
 
 .give-wrap {
-    width:145px;
+    width: 202px;
     margin: 0 auto;
     margin-bottom:10px;
-    height:43px;
+    height: 43px;
+	text-align: center;
+	line-height: 0;
     overflow:hidden;
      @include transition(all 400ms);  
     
     &.slide-up {
+		padding-left: 13px;
         margin-top:0;
     }
 }
