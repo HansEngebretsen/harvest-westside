@@ -20,7 +20,7 @@
     	            <li class="page-link" id="page-link-two"><a href="#page-two">About</a></li>
 
     	            <li class="page-link" id="prayer-room-link"><a href="http://westsideharvest.com/index.php/prayer-board">Prayer Room</a></li>
-    	            <li class="page-link" id="devos-link"><a href="http://www.theburghchurch.com/home/index.php?option=com_content&view=section&layout=blog&id=10&Itemid=64" target="_blank">Devos</a> | </li>
+    	            <li class="page-link" id="devos-link"><a href="http://westsideharvest.com/index.php/category/plan-b/" target="_blank">Devos</a> | </li>
     	            <li class="page-link" id="contact-handle" ><a href="#" class="contact-handle">Contact</a></li>
     	        </ul>
     	        </div>
