@@ -983,3 +983,18 @@ footer {
 .clinic-aside {
     float: left;
 }
+
+/* ==========================================================================
+   Plan-B Category page
+   ========================================================================== */
+#category {
+    @extend .internal-page;
+    @extend .wrapper;
+    margin: 0 auto;
+    width: 576px;
+	padding-top: 50px;
+
+	ol {
+		list-style: none;
+	}
+}
