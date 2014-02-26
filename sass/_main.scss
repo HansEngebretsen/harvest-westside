@@ -815,6 +815,17 @@ input[type="text"].amount-input {
         }
     }
 }
+.prayer-sent .comment-respond {
+    display:none;
+}
+.prayer-submit {
+    text-align:center;
+    display:none;
+    color:$orange;
+    font-size:1.3em;
+    margin-top:2em;
+    .prayer-sent & { display:block; }
+}
 
 #comments {
     margin-top: 3em;
