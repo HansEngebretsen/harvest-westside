@@ -22,8 +22,7 @@
 	            <section class="page" id="page-zero">
 	                <div class="wrapper">
 	                   <div class="slider">
-	                   <img src="<?php the_field('photo-main'); ?>" alt="" />
-	                   </div>
+<div class='embed-container'><iframe src='https://player.vimeo.com/video/87631611' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>	                   </div>
 	                    <aside>
 	                      <section class="welcome">
 	                        <h1>Welcome</h1>
