@@ -92,7 +92,7 @@ function buildParamString(params) {
 		return 1;
 	});
 
-	x = $.map(x, function (e) {
+	var x = $.map(params, function (e) {
 		return encodeURIComponent(e.key) + '=' + encodeURIComponent(e.val);
 	});
 
