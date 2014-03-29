@@ -123,7 +123,7 @@ function doAmazonPayment() {
 		return false;
 	}
 
-	var params = $inputs.map(function (el) {
+	var params = $inputs.map(function (_, el) {
 		var $x = $(el);
 		return { key: $x.attr('name'), val: $x.val() };
 	}).get();
