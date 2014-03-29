@@ -137,6 +137,6 @@ function doAmazonPayment() {
 	$form.append(
 		$('<input>')
 			.attr('type', 'hidden')
-			.attr('name', 'description')
+			.attr('name', 'signature')
 			.val(signature));
 }
