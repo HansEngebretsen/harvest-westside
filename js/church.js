@@ -14,18 +14,8 @@
 			});
 		});
 	};
-	$(".show-give-dialog").click(function (event) {
-		event.preventDefault();
-	});
 
-	/*$(".button.give").click(function (event) {
-		var value = $(this).siblings(".amount-input").val();
-		var numValue = parseFloat(value || "0");
-		if (!value || isNaN(numValue) || numValue < 1) {
-			alert("Please enter a donation amount.");
-			event.preventDefault();
-		}
-	})*/
+	$('form').submit(doAmazonPayment);
 
 	$(function () {
 
@@ -94,3 +84,59 @@ $(function () {
 		event.preventDefault();
 	});
 });
+
+function buildParamString(params) {
+	params.sort(function (a, b) {
+		if (a.key == b.key) return 0;
+		if (a.key < b.key) return -1;
+		return 1;
+	});
+
+	x = $.map(x, function (e) {
+		return encodeURIComponent(e.key) + '=' + encodeURIComponent(e.val);
+	});
+
+	return x.join("&");
+}
+function buildString(verb, host, uri, params) {
+	return verb + "\n" +
+        host + "\n" +
+        uri + "\n" +
+        buildParamString(params);
+}
+function signRequest(verb, host, uri, params) {
+	var str = buildString(verb, host, uri, params);
+	var hash = CryptoJS.HmacSHA256(str, "1234567890");
+	var base64 = CryptoJS.enc.Base64.stringify(hash);
+	return base64;
+}
+
+function doAmazonPayment() {
+	var $form = $(this);
+	var $inputs = $form.find('input');
+
+	var value = $inputs.filter('[name=amount]').val();
+	var numValue = parseFloat(value || "0");
+	if (!value || isNaN(numValue) || numValue < 1) {
+		alert("Please enter a donation amount.");
+		event.preventDefault();
+		return false;
+	}
+
+	var params = $inputs.map(function (el) {
+		var $x = $(el);
+		return { key: $x.attr('name'), val: $x.val() };
+	}).get();
+
+	var signature = signRequest(
+		'POST',
+		'authorize.payments.amazon.com',
+		'/pba/paypipeline',
+		params);
+
+	$form.append(
+		$('<input>')
+			.attr('type', 'hidden')
+			.attr('name', 'description')
+			.val(signature));
+}

@@ -47,29 +47,23 @@
 	                     	    
 	                     	    <input type="hidden" name="abandonUrl" value="http://westsideharvest.com/index.php/church">
 	                     	    <input type="hidden" name="signatureVersion" value="2">
-	                     	    <input type="hidden" name="signature" value="4V8J9EPW5l8SM0/x0efOJqdldxvFpDQO4BTQwGDPCiw=">
-	                     	   <span class="donation-header">Donation Details</span>
+	                     	    <span class="donation-header">Donation Details</span>
 	                     	    
 	                     	    <div class="input-wrap">
-	                     	  <label class="designation" for="amount">Designation:</label>
-	                     	      
-	                     	  <input  name="description"class="input-description" value="General Offering">
+	                     	      <label class="designation" for="description">Designation:</label>
+	                     	      <input name="description" class="input-description" value="General Offering">
 
-	                     	  <div class="amount-wrap">
-	                     	      <label class="dollar-sign" for="amount">$</label>
-	                     	      <input type="text" name="amount" class="amount-input" value="" placeholder="Amount">		
-	                     	    </div>
+	                     	      <div class="amount-wrap">
+	                     	        <label class="dollar-sign" for="amount">$</label>
+	                     	        <input type="text" name="amount" class="amount-input" value="" placeholder="Amount">		
 	                     	      </div>
-	                     	  
-	                     	</div>
-	                     	    <input type="submit" class="button give" border="0" value="Complete on Amazon">
+	                     	    </div>
+	                     	  </div>
+	                     	  <input type="submit" class="button give" border="0" value="Complete on Amazon">
 	                     	</form>
 			  
-
-
 		                  </div>
-	
-	                      </section> 
+	                  </section> 
 
 	                       <div class="service-times">
 	                        <ul class="times clearfix">
@@ -105,7 +99,6 @@
 	           
 	            </section>
 
-	            
 	            <section id="page-two" class="about">
 	            	<div class="wrapper">
 	            		<h1>About the Harvest<span> restore. repair. rebuild</span></h1>
@@ -130,35 +123,29 @@
 	                     	    
 	                     	    <input type="hidden" name="abandonUrl" value="http://westsideharvest.com/index.php/church">
 	                     	    <input type="hidden" name="signatureVersion" value="2">
-	                     	    <input type="hidden" name="signature" value="4V8J9EPW5l8SM0/x0efOJqdldxvFpDQO4BTQwGDPCiw=">
-	                     	   <span class="donation-header">Donation Details</span>
+	                     	    <span class="donation-header">Donation Details</span>
 	                     	    
 	                     	    <div class="input-wrap">
-	                     	  <label class="designation" for="amount">Designation:</label>
-	                     	      
-	                     	  <input  name="description"class="input-description" value="General Offering">
-
-	                     	  <div class="amount-wrap">
-	                     	      <label class="dollar-sign" for="amount">$</label>
-	                     	      <input type="text" name="amount" class="amount-input" value="" placeholder="Amount">		
-	                     	    </div>
+	                     	      <label class="designation" for="description">Designation:</label>
+	                     	      <input name="description" class="input-description" value="General Offering">
+                              
+	                     	      <div class="amount-wrap">
+	                     	        <label class="dollar-sign" for="amount">$</label>
+	                     	        <input type="text" name="amount" class="amount-input" value="" placeholder="Amount">		
 	                     	      </div>
+	                     	    </div>
 	                     	  
 	                     	</div>
-	                     	    <input type="submit" class="button give" border="0" value="Complete on Amazon">
-	                     	</form>
-			  
-
-
-		                  </div>
-		            	
+	                     	<input type="submit" class="button give" border="0" value="Complete on Amazon">
+	                    </form>
+		               </div>
 	    				</section>
 	    				<section class="half-right">
-	            			<img src="<?php the_field('about_photo'); ?>" />
-	            		</section>
-	            	</div>
+	            	<img src="<?php the_field('about_photo'); ?>" />
 	            </section>
-	          	<?php comments_template( '', true ); ?>
+	          </div>
+	        </section>
+	      <?php comments_template( '', true ); ?>
 
 
 <?php endwhile; ?>
