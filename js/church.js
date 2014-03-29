@@ -14,19 +14,18 @@
 			});
 		});
 	};
-	$(".give-toggle").click(function (event) {
+	$(".show-give-dialog").click(function (event) {
 		event.preventDefault();
-		$(this).parent('.give-wrap').toggleClass("slide-up");
 	});
 
-	$(".button.give").click(function (event) {
+	/*$(".button.give").click(function (event) {
 		var value = $(this).siblings(".amount-input").val();
 		var numValue = parseFloat(value || "0");
 		if (!value || isNaN(numValue) || numValue < 1) {
 			alert("Please enter a donation amount.");
 			event.preventDefault();
 		}
-	})
+	})*/
 
 	$(function () {
 

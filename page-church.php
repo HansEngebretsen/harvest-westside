@@ -29,7 +29,8 @@
 	                        <p><?php the_field('home_welcome_description'); ?></p>
 	                        <a href="https://maps.google.com/maps?q=2232+s.+Nogales+Avenue+Tulsa,+OK&hl=en&sll=36.152302,-95.87801&sspn=0.718543,1.19339&hnear=2232+S+Nogales+Ave,+Tulsa,+Oklahoma+74107&t=m&z=16&iwloc=A"class="button">Come Visit Us!</a>
 	                     <div class="give-wrap"> 
-	                     	<button class="button give-toggle">Online Giving</button>
+	                     	 <button class="button show-give-dialog">Online Giving</button>
+                         <!--
 		                     <form action="https://authorize.payments.amazon.com/pba/paypipeline" class="give" method="post">
 		                      	  <input type="hidden" name="returnUrl" value="http://westsideharvest.com/index.php/church">
 		                      	  <input type="hidden" name="processImmediate" value="1">
@@ -46,7 +47,7 @@
 		                      	  <input type="hidden" name="signature" value="4V8J9EPW5l8SM0/x0efOJqdldxvFpDQO4BTQwGDPCiw=">
 		                      	  <input type="text" name="amount" class="amount-input" value="" placeholder="Amount">		            		
 		                      	  <input type="submit" class="button give" border="0" value="Give">
-		                      </form>
+		                      </form> -->
 		                  </div>
 	                      </section> 
 
@@ -91,7 +92,8 @@
 	            		<section class="half-left">
 		            		<p> <?php the_field('about_description'); ?></p>
 		            		<div class="give-wrap"> 
-	                     	<button class="button give-toggle">Online Giving</button>
+	                     	<button class="button show-give-dialog">Online Giving</button>
+                      <!--
 		                     <form action="https://authorize.payments.amazon.com/pba/paypipeline" class="give" method="post">
 		                      	  <input type="hidden" name="returnUrl" value="http://westsideharvest.com/index.php/church">
 		                      	  <input type="hidden" name="processImmediate" value="1">
@@ -108,7 +110,7 @@
 		                      	  <input type="hidden" name="signature" value="4V8J9EPW5l8SM0/x0efOJqdldxvFpDQO4BTQwGDPCiw=">
 		                      	  <input type="text" name="amount" class="amount-input" value="" placeholder="Amount">		            		
 		                      	  <input type="submit" class="button give" border="0" value="Give">
-		                      </form>
+		                      </form> -->
 		                  </div>
 		            		<!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 		            		<input type="hidden" name="cmd" value="_donations">
