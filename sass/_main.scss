@@ -712,6 +712,7 @@ a.button:hover {
   border: 1px solid #D7DADD; 
   border-radius:3px; 
   background:#EFF3F5;
+  text-align:left;
   margin:10px;
 }
 .input-wrap {
@@ -729,6 +730,7 @@ a.button:hover {
 }
 .donate-form {
     text-align:center;
+    p { text-align:left;}
 }
 .donate-form input {
   border-radius:3px;
