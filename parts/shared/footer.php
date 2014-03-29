@@ -11,8 +11,8 @@
 	        <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.easing.1.3.js"></script>
 	        
 	       	<?php if( is_page('church') ) :?>
-	        	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/enc-base64-min.js"></script>
 	        	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/hmac-sha256.js"></script>
+	        	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/enc-base64-min.js"></script>
 	        	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/church.js"></script>
 	        <?php endif;?>  
 	        <script>
