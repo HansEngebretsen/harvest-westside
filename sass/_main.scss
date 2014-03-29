@@ -727,6 +727,9 @@ a.button:hover {
   text-transform:uppercase;
   color:#83939b;
 }
+.donate-form {
+    text-align:center;
+}
 .donate-form input {
   border-radius:3px;
   border: 1px solid #D7DADD;
@@ -740,6 +743,7 @@ a.button:hover {
   }
   &.amount-input {
      width:35%;
+     padding:20px;
     padding-left:30px;
   }
 }
@@ -770,8 +774,7 @@ a.button:hover {
 }
 
 .give.button {
-    float:left;
-    max-width:50%;
+    
 }
 
 // Responsive Vimeo 
