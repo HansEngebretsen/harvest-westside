@@ -7,11 +7,11 @@
 
 	        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	        <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/jquery-1.9.1.min.js"></script>
-	        <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js"></script>
+	        <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/plugins.js"></script>
 	        <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.easing.1.3.js"></script>
 	        
-	       <?php if( is_page('church') ) :?>
-	        <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/church.js"></script>
+	       	<?php if( is_page('church') ) :?>
+	        	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/church.js"></script>
 	        <?php endif;?>  
 	        <script>
 	            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

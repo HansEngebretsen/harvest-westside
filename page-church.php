@@ -92,37 +92,46 @@
 	            		<section class="half-left">
 		            		<p> <?php the_field('about_description'); ?></p>
 		            		<div class="give-wrap"> 
-	                     	<button class="button show-give-dialog">Online Giving</button>
-                      <!--
-		                     <form action="https://authorize.payments.amazon.com/pba/paypipeline" class="give" method="post">
-		                      	  <input type="hidden" name="returnUrl" value="http://westsideharvest.com/index.php/church">
-		                      	  <input type="hidden" name="processImmediate" value="1">
-		                      	  <input type="hidden" name="accessKey" value="11SEM03K88SD016FS1G2">
-		                      	  <input type="hidden" name="signatureMethod" value="HmacSHA256">
-		                      	  <input type="hidden" name="collectShippingAddress" value="0">
-		                      	  <input type="hidden" name="isDonationWidget" value="1">
-		                      	  <input type="hidden" name="amazonPaymentsAccountId" value="BMLSSZAEMKIO7H8AHVKKLB247KKJC17BEZFMLI">
-		                      	  <input type="hidden" name="cobrandingStyle" value="logo">
-		                      	  <input type="hidden" name="immediateReturn" value="0">
-		                      	  <input type="hidden" name="description" value="Donate to the Harvest Community Church">
-		                      	  <input type="hidden" name="abandonUrl" value="http://westsideharvest.com/index.php/church">
-		                      	  <input type="hidden" name="signatureVersion" value="2">
-		                      	  <input type="hidden" name="signature" value="4V8J9EPW5l8SM0/x0efOJqdldxvFpDQO4BTQwGDPCiw=">
-		                      	  <input type="text" name="amount" class="amount-input" value="" placeholder="Amount">		            		
-		                      	  <input type="submit" class="button give" border="0" value="Give">
-		                      </form> -->
+	                     	<button class="button popup-with-form" href="#test-form">Online Giving</button>
+	                     	                      
+	                     	<form action="https://authorize.payments.amazon.com/pba/paypipeline" id="test-form" class="mfp-hide donate-form white-popup-block" method="post">
+	                     	<h3>Donate to the Harvest</h3>
+	                     	  <p>Use the form below to designate the amount you would like to donate, and what you'd like to donate to. You will then be redirected to secure payments through Amazon to complete your billing information.</p>
+	                     	  <div class="form-wrap">
+	                     	    <input type="hidden" name="returnUrl" value="http://westsideharvest.com/index.php/church">
+	                     	    <input type="hidden" name="processImmediate" value="1">
+	                     	    <input type="hidden" name="accessKey" value="11SEM03K88SD016FS1G2">
+	                     	    <input type="hidden" name="signatureMethod" value="HmacSHA256">
+	                     	    <input type="hidden" name="collectShippingAddress" value="0">
+	                     	    <input type="hidden" name="isDonationWidget" value="1">
+	                     	    <input type="hidden" name="amazonPaymentsAccountId" value="BMLSSZAEMKIO7H8AHVKKLB247KKJC17BEZFMLI">
+	                     	    <input type="hidden" name="cobrandingStyle" value="logo">
+	                     	    <input type="hidden" name="immediateReturn" value="0">
+	                     	    
+	                     	    <input type="hidden" name="abandonUrl" value="http://westsideharvest.com/index.php/church">
+	                     	    <input type="hidden" name="signatureVersion" value="2">
+	                     	    <input type="hidden" name="signature" value="4V8J9EPW5l8SM0/x0efOJqdldxvFpDQO4BTQwGDPCiw=">
+	                     	   <span class="donation-header">Donation Details</span>
+	                     	    
+	                     	    <div class="input-wrap">
+	                     	  <label class="designation" for="amount">Designation:</label>
+	                     	      
+	                     	  <input  name="description"class="input-description" value="General Offering">
+
+	                     	  <div class="amount-wrap">
+	                     	      <label class="dollar-sign" for="amount">$</label>
+	                     	      <input type="text" name="amount" class="amount-input" value="" placeholder="Amount">		
+	                     	    </div>
+	                     	      </div>
+	                     	  
+	                     	</div>
+	                     	    <input type="submit" class="button give" border="0" value="Complete on Amazon">
+	                     	</form>
+			  
+
+
 		                  </div>
-		            		<!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-		            		<input type="hidden" name="cmd" value="_donations">
-		            		<input type="hidden" name="business" value="daniel@faithburgh.com">
-		            		<input type="hidden" name="item_name" value="The Burgh Donation">
-		            		<input type="hidden" name="no_shipping" value="0">
-		            		<input type="hidden" name="no_note" value="1">
-		            		<input type="hidden" name="currency_code" value="USD">
-		            		<input type="hidden" name="tax" value="0">
-		            		<input type="hidden" name="bn" value="PP-DonationsBF">
-		            		<input type="submit" class="button" border="0" name="submit" value="Online Giving">
-		            		</form> -->
+		            	
 	    				</section>
 	    				<section class="half-right">
 	            			<img src="<?php the_field('about_photo'); ?>" />
