@@ -33,7 +33,7 @@
 	                     	                      
 	                     	<form action="https://authorize.payments.amazon.com/pba/paypipeline" id="test-form" class="mfp-hide donate-form white-popup-block" method="post">
 	                     	<h3>Donate to the Harvest</h3>
-	                     	  <p>Use the form below to designate the amount you would like to donate, and what you'd like to donate to. You will then be redirected to secure payments through Amazon to complete your billing information.</p>
+	                     	  <p>Use the form below to designate the amount you would like to donate, and what you'd like to donate to (designation is currently disabled; we hope to fix this soon). You will then be redirected to secure payments through Amazon to complete your billing information.</p>
 	                     	  <div class="form-wrap">
 	                     	    <input type="hidden" name="returnUrl" value="http://westsideharvest.com/index.php/church">
 	                     	    <input type="hidden" name="processImmediate" value="1">
@@ -44,14 +44,14 @@
 	                     	    <input type="hidden" name="amazonPaymentsAccountId" value="BMLSSZAEMKIO7H8AHVKKLB247KKJC17BEZFMLI">
 	                     	    <input type="hidden" name="cobrandingStyle" value="logo">
 	                     	    <input type="hidden" name="immediateReturn" value="0">
-	                     	    
-	                     	    <input type="hidden" name="abandonUrl" value="http://westsideharvest.com/index.php/church">
+                            <input type="hidden" name="signature" value="4V8J9EPW5l8SM0/x0efOJqdldxvFpDQO4BTQwGDPCiw=">
+                            <input type="hidden" name="abandonUrl" value="http://westsideharvest.com/index.php/church">
 	                     	    <input type="hidden" name="signatureVersion" value="2">
 	                     	    <span class="donation-header">Donation Details</span>
 	                     	    
 	                     	    <div class="input-wrap">
 	                     	      <label class="designation" for="description">Designation:</label>
-	                     	      <input name="description" class="input-description" value="General Offering">
+	                     	      <input name="description" class="input-description" value="Donate to the Harvest Community Church" readonly="readonly">
 
 	                     	      <div class="amount-wrap">
 	                     	        <label class="dollar-sign" for="amount">$</label>
@@ -109,7 +109,7 @@
 	                     	                      
 	                     	<form action="https://authorize.payments.amazon.com/pba/paypipeline" id="test-form" class="mfp-hide donate-form white-popup-block" method="post">
 	                     	<h3>Donate to the Harvest</h3>
-	                     	  <p>Use the form below to designate the amount you would like to donate, and what you'd like to donate to. You will then be redirected to secure payments through Amazon to complete your billing information.</p>
+	                     	  <p>Use the form below to designate the amount you would like to donate, and what you'd like to donate to (designation is currently disabled; we hope to fix this soon). You will then be redirected to secure payments through Amazon to complete your billing information.</p>
 	                     	  <div class="form-wrap">
 	                     	    <input type="hidden" name="returnUrl" value="http://westsideharvest.com/index.php/church">
 	                     	    <input type="hidden" name="processImmediate" value="1">
@@ -120,14 +120,14 @@
 	                     	    <input type="hidden" name="amazonPaymentsAccountId" value="BMLSSZAEMKIO7H8AHVKKLB247KKJC17BEZFMLI">
 	                     	    <input type="hidden" name="cobrandingStyle" value="logo">
 	                     	    <input type="hidden" name="immediateReturn" value="0">
-	                     	    
-	                     	    <input type="hidden" name="abandonUrl" value="http://westsideharvest.com/index.php/church">
+                            <input type="hidden" name="signature" value="4V8J9EPW5l8SM0/x0efOJqdldxvFpDQO4BTQwGDPCiw=">
+                            <input type="hidden" name="abandonUrl" value="http://westsideharvest.com/index.php/church">
 	                     	    <input type="hidden" name="signatureVersion" value="2">
 	                     	    <span class="donation-header">Donation Details</span>
 	                     	    
 	                     	    <div class="input-wrap">
 	                     	      <label class="designation" for="description">Designation:</label>
-	                     	      <input name="description" class="input-description" value="General Offering">
+	                     	      <input name="description" class="input-description" value="Donate to the Harvest Community Church" readonly="readonly">
                               
 	                     	      <div class="amount-wrap">
 	                     	        <label class="dollar-sign" for="amount">$</label>
