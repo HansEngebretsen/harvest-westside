@@ -11,30 +11,40 @@
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <?php
 if(isset($_POST['email'])) {
+    if (!function_exists( 'cptch_check_custom_form' ) || cptch_check_custom_form() === true) {
      
-    $name = $_POST['author']; 
-    $email_from = $_POST['email'];
-    $comments = $_POST['comment']; 
+      $name = $_POST['author']; 
+      $email_from = $_POST['email'];
+      $comments = $_POST['comment']; 
      
-    function clean_string($string) {
-      $bad = array("content-type","bcc:","to:","cc:","href");
-      return str_replace($bad,"",$string);
-    }
+      function clean_string($string) {
+        $bad = array("content-type","bcc:","to:","cc:","href");
+        return str_replace($bad,"",$string);
+      }
    
-    $email_message = "Prayer request received on website:\n\n";
-    $email_message .= "First Name: ".clean_string($name)."\n";
-    $email_message .= "Email: ".clean_string($email_from)."\n";
-    $email_message .= "Comments: ".clean_string($comments)."\n";
+      $email_message = "Prayer request received on website:\n\n";
+      $email_message .= "First Name: ".clean_string($name)."\n";
+      $email_message .= "Email: ".clean_string($email_from)."\n";
+      $email_message .= "Comments: ".clean_string($comments)."\n";
     
-    $to = 'michelle@westsideharvest.com';
-    $subject = 'Harvest Website Prayer Request';
+      $to = 'michelle@westsideharvest.com';
+      $subject = 'Harvest Website Prayer Request';
 
-    wp_mail($to, $subject, $email_message);
+      wp_mail($to, $subject, $email_message);
 ?>
 <div class="wrapper main-content prayer-sent">
 <?php
+    }
+    else { /* failed CAPTCHA */
+?>
+<script type="text/javascript">
+  jQuery(document).ready(function() { alert('Please enter a valid CAPTCHA.'); });
+</script>
+<div class="wrapper main-content">
+<?php
+    }
 }
-else
+else /* Pre-EMAIL */
 {
 ?>
 <div class="wrapper main-content">
@@ -47,25 +57,31 @@ else
 		<?php the_content(); ?>
 	</div>
     <script type="text/javascript">
-    	$('#submit').click(function(){
-    		if (!$('#author').val()) {
-    			alert('Please enter your name.');
-    			return false;
-    		}
-    		var email = $('#email').val();
-    		if (!email) {
-    			alert('Please enter your email address.');
-    			return false;
-    		}
-    		if (email.indexOf('@') < 0) {
-    			alert('Please enter a valid email address.');
-    			return false;
-    		}
-    		if (!$('#comment').val()) {
-    			alert('Please enter a prayer request.');
-    			return false;
-    		}
-    	})
+      jQuery(document).ready(function() {
+        jQuery('#submit').click(function(){
+    		  if (!$('#author').val()) {
+    			  alert('Please enter your name.');
+    			  return false;
+    		  }
+    		  var email = $('#email').val();
+    		  if (!email) {
+    			  alert('Please enter your email address.');
+    			  return false;
+    		  }
+    		  if (email.indexOf('@') < 0) {
+    			  alert('Please enter a valid email address.');
+    			  return false;
+    		  }
+    		  if (!$('#comment').val()) {
+    			  alert('Please enter a prayer request.');
+    			  return false;
+    		  }
+          if (!$('input[name="cptch_number"]').val()) {
+            alert('Please complete the CAPTCHA.');
+            return false;
+          }
+    	  });
+      });
     </script>
 	<div id="comments">
 		<p class="prayer-submit">Thanks for submitting a prayer request. We'll be praying for you!</p>
@@ -74,9 +90,10 @@ else
 				<form method="post" id="commentform" class="comment-form">
 					<div class="form-left">
 						<input id="author" class="name-input" placeholder="Your Name" name="author" type="text">
-						<input id="email" class="email-input" placeholder="Your E-mail" name="email" type="text"></div>
-
-						<p class="comment-form-comment">
+						<input id="email" class="email-input" placeholder="Your E-mail" name="email" type="text">
+            <?php if( function_exists( 'cptch_display_captcha_custom' ) ) { echo "<input type='hidden' name='cntctfrm_contact_action' value='true' />"; echo cptch_display_captcha_custom(); } ?>
+          </div>
+          <p class="comment-form-comment">
 							<label for="comment" class="hidden">Your Prayer Request:</label>
 							<textarea id="comment" class="message-content" name="comment" placeholder="How can we pray for you?" rows="8" aria-required="true"></textarea></p><!-- #form-section-comment .form-section -->												<p class="form-submit">
 							<input name="submit" type="submit" id="submit" value="Submit Request">
