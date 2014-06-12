@@ -22,7 +22,8 @@
 	            <section class="page" id="page-zero">
 	                <div class="wrapper">
 	                   <div class="slider">
-<div class='embed-container'><iframe src='https://player.vimeo.com/video/87631611' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>	                   </div>
+                       <div class='embed-container'><iframe src='https://player.vimeo.com/video/87631611' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+                     </div>
 	                    <aside>
 	                      <section class="welcome">
 	                        <h1>Welcome</h1>
@@ -86,13 +87,13 @@
 	              <section>
 	                <div class="collumn">
 	                  <h1>Sundays</h1>
-	                  <p>Worship for all ages begins at 11:00am. After announcements and songs, children are dismissed for Nursery, Toddler Class, or Children’s Church while adults stay for the teaching.</p>
+	                  <p><?php the_field('services_sunday_description'); ?></p>
 	                <a href="http://feeds.feedburner.com/theburghchurch/zZFu" class="button podcasts">Podcasts</a>
 
 	                </div>
 	                <div class="collumn">
 	                  <h1>Wednesdays</h1>
-	                  <p>Join us at 6:00pm for a delicious, home-cooked meal. At 6:30, children head to Kid’s Connection, Youth head to J-Crew, and adults enjoy an in-depth Bible study. And again, Nursery and Toddler class are available for those who qualify!</p>
+	                  <p><?php the_field('services_wednesday_description'); ?></p>
 	                </div>
 	              </section>
 	              </div>
