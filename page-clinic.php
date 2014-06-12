@@ -12,7 +12,10 @@
  <div class="main-content clinic-page">
  	<h1 class="title"> <img src="<?php bloginfo('template_directory'); ?>/img/Template/harvest-clinic-logo.png" class="clinic-logo" alt="The Harvest Westside Clinic"></h1>
  	<p class="clinic-description"><?php the_field('clinic_main_description'); ?></p>
-
+   <div class='embed-container'>
+     <iframe src='https://player.vimeo.com/video/87631611' frameborder='0' webkitAllowFullScreen='' mozallowfullscreen='' allowFullScreen=''></iframe>
+   </div>
+   <p></p>
  		<img src="<?php the_field('clinic_main_image'); ?>" class="clinic-photo" alt="The Harvest Westside Clinic">
  	<aside class="clinic-aside">
        <div class="service-times">
