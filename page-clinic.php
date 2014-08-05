@@ -32,6 +32,7 @@
       </div>
     </aside>
   
+    <br /><br />
  		<img src="<?php the_field('image_2'); ?>" alt="The Harvest Westside Clinic">
     <br /><br />
  		<img src="<?php the_field('image_3'); ?>" alt="The Harvest Westside Clinic">
