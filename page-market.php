@@ -17,6 +17,7 @@
     </div>
  		<p><?php the_field('main_market_description'); ?></p>
  		<img src="<?php the_field('main_image'); ?>" alt="Westside Harvest Market" />
+    <br />
  		<img src="<?php the_field('second_image'); ?>" alt="Westside Harvest Market" />
  	</div>
 </div>
