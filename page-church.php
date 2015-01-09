@@ -45,14 +45,25 @@
 	                     	    <input type="hidden" name="amazonPaymentsAccountId" value="BMLSSZAEMKIO7H8AHVKKLB247KKJC17BEZFMLI">
 	                     	    <input type="hidden" name="cobrandingStyle" value="logo">
 	                     	    <input type="hidden" name="immediateReturn" value="0">
-                            <input type="hidden" name="signature" value="4V8J9EPW5l8SM0/x0efOJqdldxvFpDQO4BTQwGDPCiw=">
+                            <input type="hidden" name="signature" value="">
                             <input type="hidden" name="abandonUrl" value="http://westsideharvest.com/index.php/church">
 	                     	    <input type="hidden" name="signatureVersion" value="2">
 	                     	    <span class="donation-header">Donation Details</span>
 	                     	    
 	                     	    <div class="input-wrap">
 	                     	      <label class="designation" for="description">Designation:</label>
-	                     	      <input name="description" class="input-description" value="Donate to the Harvest Community Church" readonly="readonly">
+															<select name="description" class="input-description">
+																<option>--</option>
+																<option signature="V8iD81fYpOWVaU6hHoBYFsc3Lv0Z3WzuuqrHXj8MlgE=" >Harvest Community Church                        </option>
+																<option signature="3BtusbtSua1HvElg05jOEZk9pdALCnxpyJz1CsSjBTc=" >Harvest Market                                  </option>
+																<option signature="UDSwer45t5lk4Svan2P9jIpq+nJp2kBBCu6X8zK2wy4=" >Staff Support - Daniel May                      </option>
+																<option signature="RAqAAR59zLW5Ec3caRFNA90h910WRk4+iyOe/Eg3N3s=" >Staff Support - Luke Polly                      </option>
+																<option signature="R1CRcm4dccsjozvN/Ijh/h/0j0YYVM9HFm1ZJaH/2Pc=" >Staff Support - Mariah Shaw                     </option>
+																<option signature="Yo6rTGLKXMtBSfEcmcE3+uWQbmlUoL1erjcnHfx8eqc=" >Missionary Support - Emily Sengal               </option>
+																<option signature="erMGMsaTLghwF0eEv6FSCk1O86h1puyKplTfXlIxgqw=" >Missionary Support - Neeraj Gautam              </option>
+																<option signature="AkkkIrG4jKJ+5rsaX6mc9ApQhCFyujVejScrHTlMROs=" >Missionary Support - Sonya Dilworth             </option>
+																<option signature="tTXvDe0Ui/SomJ78NHjP177/diDRn65CUYrw/3I9848=" >Missionary Support - Ryan &amp; Melissa Dilworth</option>
+															</select>
 
 	                     	      <div class="amount-wrap">
 	                     	        <label class="dollar-sign" for="amount">$</label>

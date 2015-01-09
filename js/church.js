@@ -15,7 +15,11 @@
 		});
 	};
 
-	// $('form').submit(doAmazonPayment);
+	$('select[name=description]').change(function () {
+		var select = $(this);
+		var signature = select.find('option:selected').attr('signature');
+		$('input[name=signature]').val(signature);
+	});
 
 	$(function () {
 
