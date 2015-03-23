@@ -34,7 +34,7 @@
 	                     	                      
 	                     	<form action="https://authorize.payments.amazon.com/pba/paypipeline" id="test-form" class="mfp-hide donate-form white-popup-block" method="post">
 	                     	<h3>Donate to the Harvest</h3>
-	                     	  <p>Use the form below to designate the amount you would like to donate, and what you'd like to donate to (designation is currently disabled; we hope to fix this soon). You will then be redirected to secure payments through Amazon to complete your billing information.</p>
+	                     	  <p>Use the form below to designate the amount you would like to donate, and what you'd like to donate to. You will then be redirected to secure payments through Amazon to complete your billing information.</p>
 	                     	  <div class="form-wrap">
 	                     	    <input type="hidden" name="returnUrl" value="http://westsideharvest.com/index.php/church">
 	                     	    <input type="hidden" name="processImmediate" value="1">
