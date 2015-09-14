@@ -26,11 +26,11 @@
             <p>A neighborhood market providing essential resources for the community</p>
             <p><a class="btn" href="/index.php/market">Market Site &raquo;</a></p></a>
        </div>
-        <div class="one-third-col clinic">
+        <!--<div class="one-third-col clinic">
             <a href="/index.php/clinic/"><h2>Clinic</h2>
             <p>A mobile health clinic offering free, quality medical care</p>
             <p><a class="btn" href="/index.php/clinic">Clinic Site &raquo;</a></p></a>
-        </div>
+        </div>-->
     </div>
 
 <?php endwhile; ?>
