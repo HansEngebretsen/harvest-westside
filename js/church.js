@@ -16,14 +16,16 @@
 	};
 
 	$('select[name=description]').change(function () {
-		var select = $(this);
-		var signature = select.find('option:selected').attr('signature');
-		$('input[name=signature]').val(signature);
+	    var select = $(this);
+	    select.siblings('div').children('div').hide();
+		var div_id = select.find('option:selected').attr('div_id');
+		$('#' + div_id).show();
 	});
+	$('select[name=description]').change();
 
 	$(function () {
 
-		// grab the initial top offset of the navigation 
+		// grab the initial top offset of the navigation
 		var sticky_navigation_offset_top = $('#header').offset().top;
 
 		// our function that decides weather the navigation bar should have "fixed" css position or not.
@@ -88,62 +90,6 @@ $(function () {
 		event.preventDefault();
 	});
 });
-
-function buildParamString(params) {
-	params.sort(function (a, b) {
-		if (a.key == b.key) return 0;
-		if (a.key < b.key) return -1;
-		return 1;
-	});
-
-	var x = $.map(params, function (e) {
-		return encodeURIComponent(e.key) + '=' + encodeURIComponent(e.val);
-	});
-
-	return x.join("&");
-}
-function buildString(verb, host, uri, params) {
-	return verb + "\n" +
-        host + "\n" +
-        uri + "\n" +
-        buildParamString(params);
-}
-function signRequest(verb, host, uri, params) {
-	var str = buildString(verb, host, uri, params);
-	var hash = CryptoJS.HmacSHA256(str, "1234567890");
-	var base64 = CryptoJS.enc.Base64.stringify(hash);
-	return base64;
-}
-
-function doAmazonPayment() {
-	var $form = $(this);
-	var $inputs = $form.find('input');
-
-	var value = $inputs.filter('[name=amount]').val();
-	var numValue = parseFloat(value || "0");
-	if (!value || isNaN(numValue) || numValue < 1) {
-		alert("Please enter a donation amount.");
-		event.preventDefault();
-		return false;
-	}
-
-	var params = $inputs.map(function (_, el) {
-		var $x = $(el);
-		return { key: $x.attr('name'), val: $x.val() };
-	}).get();
-
-	var signature = signRequest(
-		'POST',
-		'authorize.payments.amazon.com',
-		'/pba/paypipeline',
-		params);
-
-	$form.append(
-		$('<input>')
-			.attr('type', 'hidden')
-			.attr('name', 'signature')
-			.val(signature));
-}
 
 Array.prototype.remove = function (from, to) {
 	var rest = this.slice((to || from) + 1 || this.length);
