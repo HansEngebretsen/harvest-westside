@@ -11,38 +11,27 @@
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <?php
 if(isset($_POST['email'])) {
-    if (!function_exists( 'cptch_check_custom_form' ) || cptch_check_custom_form() === true) {
-     
-      $name = $_POST['author']; 
-      $email_from = $_POST['email'];
-      $comments = $_POST['comment']; 
-     
-      function clean_string($string) {
-        $bad = array("content-type","bcc:","to:","cc:","href");
-        return str_replace($bad,"",$string);
-      }
-   
-      $email_message = "Prayer request received on website:\n\n";
-      $email_message .= "First Name: ".clean_string($name)."\n";
-      $email_message .= "Email: ".clean_string($email_from)."\n";
-      $email_message .= "Comments: ".clean_string($comments)."\n";
-    
-      $to = 'michelle@westsideharvest.com';
-      $subject = 'Harvest Website Prayer Request';
+    $name = $_POST['author'];
+    $email_from = $_POST['email'];
+    $comments = $_POST['comment'];
 
-      wp_mail($to, $subject, $email_message);
+    function clean_string($string) {
+      $bad = array("content-type","bcc:","to:","cc:","href");
+      return str_replace($bad,"",$string);
+    }
+
+    $email_message = "Prayer request received on website:\n\n";
+    $email_message .= "First Name: ".clean_string($name)."\n";
+    $email_message .= "Email: ".clean_string($email_from)."\n";
+    $email_message .= "Comments: ".clean_string($comments)."\n";
+
+    $to = 'michelle@westsideharvest.com, stuie@westsideharvest.com';
+    $subject = 'Harvest Website Prayer Request';
+
+    wp_mail($to, $subject, $email_message);
 ?>
 <div class="wrapper main-content prayer-sent">
 <?php
-    }
-    else { /* failed CAPTCHA */
-?>
-<script type="text/javascript">
-  jQuery(document).ready(function() { alert('Please enter a valid CAPTCHA.'); });
-</script>
-<div class="wrapper main-content">
-<?php
-    }
 }
 else /* Pre-EMAIL */
 {
@@ -76,10 +65,6 @@ else /* Pre-EMAIL */
     			  alert('Please enter a prayer request.');
     			  return false;
     		  }
-          if (!$('input[name="cptch_number"]').val()) {
-            alert('Please complete the CAPTCHA.');
-            return false;
-          }
     	  });
       });
     </script>
@@ -91,7 +76,6 @@ else /* Pre-EMAIL */
 					<div class="form-left">
 						<input id="author" class="name-input" placeholder="Your Name" name="author" type="text">
 						<input id="email" class="email-input" placeholder="Your E-mail" name="email" type="text">
-            <?php if( function_exists( 'cptch_display_captcha_custom' ) ) { echo "<input type='hidden' name='cntctfrm_contact_action' value='true' />"; echo cptch_display_captcha_custom(); } ?>
           </div>
           <p class="comment-form-comment">
 							<label for="comment" class="hidden">Your Prayer Request:</label>
