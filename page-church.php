@@ -84,6 +84,7 @@
                             <option>--</option>
                             <option div_id="church_support" >Harvest Community Church                         </option>
                             <option div_id="market_support" >Harvest Market                                   </option>
+                            <option div_id="santas_support" >Harvest Market - Santa's Village                 </option>
                             <option div_id="daniel_support" >Staff Support - Daniel May                       </option>
                             <option div_id="valeri_support" >Missionary Support - Valerie Whittenburger       </option>
                             <option div_id="sengal_support" >Missionary Support - Emily Sengal                </option>
@@ -125,6 +126,24 @@
                                 data-ap-currency-code="USD"
                                 data-ap-amount="0"
                                 data-ap-note="Harvest Market"
+                                data-ap-shipping-address-required="false"
+                                data-ap-payment-action="AuthorizeAndCapture">
+                            </div>
+                            <div
+                                id="santas_support"
+                                class="amazon_payments"
+                                data-ap-widget-type="expressDonationWidget"
+                                data-ap-widget-theme="ap-light"
+                                data-ap-widget-amount-presets="25,50,100,150"
+                                data-ap-widget-default-amount="0"
+                                data-ap-signature="4CusFYIzdp%2Be42i7BiRl9pP448alg5jU9NKzhKz0ARI%3D"
+                                data-ap-seller-id="AKQ4KNZWFDUIT"
+                                data-ap-access-key="AKIAINII5XHTMBO4V5LA"
+                                data-ap-lwa-client-id="amzn1.application-oa2-client.08628897464f4a15af2b15a331ee45d9"
+                                data-ap-return-url="http://www.westsideharvest.com/index.php/church"
+                                data-ap-currency-code="USD"
+                                data-ap-amount="0"
+                                data-ap-note="Harvest Community Church - Santas Village"
                                 data-ap-shipping-address-required="false"
                                 data-ap-payment-action="AuthorizeAndCapture">
                             </div>
