@@ -90,7 +90,6 @@
                             <option div_id="sengal_support" >Missionary Support - Emily Sengal                </option>
                             <option div_id="neeraj_support" >Missionary Support - Neeraj Gautam               </option>
                             <option div_id="sonyad_support" >Missionary Support - Sonya Dilworth              </option>
-                            <option div_id="ryanen_support" >Missionary Support - Ryan &amp; Melissa Entwistle</option>
                           </select>
                           <div class="form-wrap">
                             <div
@@ -233,24 +232,6 @@
                                 data-ap-currency-code="USD"
                                 data-ap-amount="0"
                                 data-ap-note="Missionary Support - Sonya Dilworth"
-                                data-ap-shipping-address-required="false"
-                                data-ap-payment-action="AuthorizeAndCapture">
-                            </div>
-                            <div
-                                id="ryanen_support"
-                                class="amazon_payments"
-                                data-ap-widget-type="expressDonationWidget"
-                                data-ap-widget-theme="ap-light"
-                                data-ap-widget-amount-presets="25,50,100,150"
-                                data-ap-widget-default-amount="1"
-                                data-ap-signature="B0oypbxE%2FXGYAiSj9zuqAAklbPQwCBiSlzNv0lgol2A%3D"
-                                data-ap-seller-id="AKQ4KNZWFDUIT"
-                                data-ap-access-key="AKIAINII5XHTMBO4V5LA"
-                                data-ap-lwa-client-id="amzn1.application-oa2-client.08628897464f4a15af2b15a331ee45d9"
-                                data-ap-return-url="http://www.westsideharvest.com/index.php/church"
-                                data-ap-currency-code="USD"
-                                data-ap-amount="0"
-                                data-ap-note="Missionary Support - Ryan and Melissa Entwistle"
                                 data-ap-shipping-address-required="false"
                                 data-ap-payment-action="AuthorizeAndCapture">
                             </div>
