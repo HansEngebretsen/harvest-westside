@@ -1,0 +1,194 @@
+<html>
+<head>
+<style>
+body{margin-left: auto; margin-right: auto; text-align: center; max-width: 500px;}
+h3,p{color: #BF4916; font-family: Tahoma, Verdana, sans-serif;}
+</style>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css" />
+</head>
+<body>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script async src="https://static-na.payments-amazon.com/OffAmazonPayments/us/js/Widgets.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+    	$('#amazon-support-dialog').hide();
+    	$('#amazon-support-dialog > div').hide();
+        
+        $('select[name=description]').change(function () {
+	        var select = $(this);
+        	$('#amazon-support-dialog > div').hide();
+
+	    	var div_id = select.find('option:selected').attr('div_id');
+            if (!!div_id){
+	    	    $('#' + div_id).show();
+    	        $('#amazon-support-dialog').show();
+            }
+    	});
+    });
+</script>
+
+<div>
+<h3>Donate to the Harvest</h3>
+<p>Simply select your designation, enter how much you would like to give, and you will be directed to Amazon's secure payment site to complete the donation process!</p>
+<select name="description" class="input-description">
+    <option>--</option>
+    <option div_id="church_support" >Harvest Community Church                         </option>
+    <option div_id="market_support" >Harvest Market                                   </option>
+    <option div_id="santas_support" >Harvest Market - Santa's Village                 </option>
+    <option div_id="daniel_support" >Staff Support - Daniel May                       </option>
+    <option div_id="valeri_support" >Missionary Support - Valerie Whittenburger       </option>
+    <option div_id="sengal_support" >Missionary Support - Emily Sengal                </option>
+    <option div_id="neeraj_support" >Missionary Support - Neeraj Gautam               </option>
+    <option div_id="sonyad_support" >Missionary Support - Sonya Dilworth              </option>
+</select>
+
+                          <div id="amazon-support-dialog">
+                            <div
+                                id="church_support"
+                                class="amazon_payments"
+                                data-ap-widget-type="expressDonationWidget"
+                                data-ap-widget-theme="ap-light"
+                                data-ap-widget-amount-presets="25,50,100,150"
+                                data-ap-widget-default-amount="0"
+                                data-ap-signature="oqmHYCggiOeAgRkXMj%2FrSLgHXvqCX7w3lgXNz44tMAw%3D"
+                                data-ap-seller-id="AKQ4KNZWFDUIT"
+                                data-ap-access-key="AKIAINII5XHTMBO4V5LA"
+                                data-ap-lwa-client-id="amzn1.application-oa2-client.08628897464f4a15af2b15a331ee45d9"
+                                data-ap-return-url="http://www.westsideharvest.com/index.php/church"
+                                data-ap-currency-code="USD"
+                                data-ap-amount="0"
+                                data-ap-note="Harvest Community Church"
+                                data-ap-shipping-address-required="false"
+                                data-ap-payment-action="AuthorizeAndCapture">
+                            </div>
+                            <div
+                                id="market_support"
+                                class="amazon_payments"
+                                data-ap-widget-type="expressDonationWidget"
+                                data-ap-widget-theme="ap-light"
+                                data-ap-widget-amount-presets="25,50,100,150"
+                                data-ap-widget-default-amount="0"
+                                data-ap-signature="M9ktSclKXVRa4bdhfPIfoyyaI6CD3unORexZy4BwKus%3D"
+                                data-ap-seller-id="AKQ4KNZWFDUIT"
+                                data-ap-access-key="AKIAINII5XHTMBO4V5LA"
+                                data-ap-lwa-client-id="amzn1.application-oa2-client.08628897464f4a15af2b15a331ee45d9"
+                                data-ap-return-url="http://www.westsideharvest.com/index.php/church"
+                                data-ap-currency-code="USD"
+                                data-ap-amount="0"
+                                data-ap-note="Harvest Market"
+                                data-ap-shipping-address-required="false"
+                                data-ap-payment-action="AuthorizeAndCapture">
+                            </div>
+                            <div
+                                id="santas_support"
+                                class="amazon_payments"
+                                data-ap-widget-type="expressDonationWidget"
+                                data-ap-widget-theme="ap-light"
+                                data-ap-widget-amount-presets="25,50,100,150"
+                                data-ap-widget-default-amount="0"
+                                data-ap-signature="4CusFYIzdp%2Be42i7BiRl9pP448alg5jU9NKzhKz0ARI%3D"
+                                data-ap-seller-id="AKQ4KNZWFDUIT"
+                                data-ap-access-key="AKIAINII5XHTMBO4V5LA"
+                                data-ap-lwa-client-id="amzn1.application-oa2-client.08628897464f4a15af2b15a331ee45d9"
+                                data-ap-return-url="http://www.westsideharvest.com/index.php/church"
+                                data-ap-currency-code="USD"
+                                data-ap-amount="0"
+                                data-ap-note="Harvest Community Church - Santas Village"
+                                data-ap-shipping-address-required="false"
+                                data-ap-payment-action="AuthorizeAndCapture">
+                            </div>
+                            <div
+                                id="daniel_support"
+                                class="amazon_payments"
+                                data-ap-widget-type="expressDonationWidget"
+                                data-ap-widget-theme="ap-light"
+                                data-ap-widget-amount-presets="25,50,100,150"
+                                data-ap-widget-default-amount="1"
+                                data-ap-signature="Rzdms4TttJUKhhcFD%2BlsWBK2DVvAYccIOARKCJ3yqmg%3D"
+                                data-ap-seller-id="AKQ4KNZWFDUIT"
+                                data-ap-access-key="AKIAINII5XHTMBO4V5LA"
+                                data-ap-lwa-client-id="amzn1.application-oa2-client.08628897464f4a15af2b15a331ee45d9"
+                                data-ap-return-url="http://www.westsideharvest.com/index.php/church"
+                                data-ap-currency-code="USD"
+                                data-ap-amount="0"
+                                data-ap-note="Staff Support - Daniel May"
+                                data-ap-shipping-address-required="false"
+                                data-ap-payment-action="AuthorizeAndCapture">
+                            </div>
+                            <div
+                                id="valeri_support"
+                                class="amazon_payments"
+                                data-ap-widget-type="expressDonationWidget"
+                                data-ap-widget-theme="ap-light"
+                                data-ap-widget-amount-presets="25,50,100,150"
+                                data-ap-widget-default-amount="1"
+                                data-ap-signature="Een9uhOqQhrwiVHcjB%2BgrB58RMBVmJ3nvoEURoNHeTs%3D"
+                                data-ap-seller-id="AKQ4KNZWFDUIT"
+                                data-ap-access-key="AKIAINII5XHTMBO4V5LA"
+                                data-ap-lwa-client-id="amzn1.application-oa2-client.08628897464f4a15af2b15a331ee45d9"
+                                data-ap-return-url="http://www.westsideharvest.com/index.php/church"
+                                data-ap-currency-code="USD"
+                                data-ap-amount="0"
+                                data-ap-note="Missionary Support - Valerie Whittenburger"
+                                data-ap-shipping-address-required="false"
+                                data-ap-payment-action="AuthorizeAndCapture">
+                            </div>
+                            <div
+                                id="sengal_support"
+                                class="amazon_payments"
+                                data-ap-widget-type="expressDonationWidget"
+                                data-ap-widget-theme="ap-light"
+                                data-ap-widget-amount-presets="25,50,100,150"
+                                data-ap-widget-default-amount="1"
+                                data-ap-signature="MHGgxWkO6U2q6DfsPatnDmZzcdQW1sKz5r5WADIrke0%3D"
+                                data-ap-seller-id="AKQ4KNZWFDUIT"
+                                data-ap-access-key="AKIAINII5XHTMBO4V5LA"
+                                data-ap-lwa-client-id="amzn1.application-oa2-client.08628897464f4a15af2b15a331ee45d9"
+                                data-ap-return-url="http://www.westsideharvest.com/index.php/church"
+                                data-ap-currency-code="USD"
+                                data-ap-amount="0"
+                                data-ap-note="Missionary Support - Emily Sengal"
+                                data-ap-shipping-address-required="false"
+                                data-ap-payment-action="AuthorizeAndCapture">
+                            </div>
+                            <div
+                                id="neeraj_support"
+                                class="amazon_payments"
+                                data-ap-widget-type="expressDonationWidget"
+                                data-ap-widget-theme="ap-light"
+                                data-ap-widget-amount-presets="25,50,100,150"
+                                data-ap-widget-default-amount="1"
+                                data-ap-signature="yU0cSPJKXWLzrvcgk6Ro15yJa5cSv%2Bx83G3Qrvtk%2BGY%3D"
+                                data-ap-seller-id="AKQ4KNZWFDUIT"
+                                data-ap-access-key="AKIAINII5XHTMBO4V5LA"
+                                data-ap-lwa-client-id="amzn1.application-oa2-client.08628897464f4a15af2b15a331ee45d9"
+                                data-ap-return-url="http://www.westsideharvest.com/index.php/church"
+                                data-ap-currency-code="USD"
+                                data-ap-amount="0"
+                                data-ap-note="Missionary Support - Neeraj Gautam"
+                                data-ap-shipping-address-required="false"
+                                data-ap-payment-action="AuthorizeAndCapture">
+                            </div>
+                            <div
+                                id="sonyad_support"
+                                class="amazon_payments"
+                                data-ap-widget-type="expressDonationWidget"
+                                data-ap-widget-theme="ap-light"
+                                data-ap-widget-amount-presets="25,50,100,150"
+                                data-ap-widget-default-amount="1"
+                                data-ap-signature="rhaDaPnOrU4E0pJyE%2B50Igz0JrgiU8n23UVPeU%2FCVPc%3D"
+                                data-ap-seller-id="AKQ4KNZWFDUIT"
+                                data-ap-access-key="AKIAINII5XHTMBO4V5LA"
+                                data-ap-lwa-client-id="amzn1.application-oa2-client.08628897464f4a15af2b15a331ee45d9"
+                                data-ap-return-url="http://www.westsideharvest.com/index.php/church"
+                                data-ap-currency-code="USD"
+                                data-ap-amount="0"
+                                data-ap-note="Missionary Support - Sonya Dilworth"
+                                data-ap-shipping-address-required="false"
+                                data-ap-payment-action="AuthorizeAndCapture">
+                            </div>
+</div>
+ </body>
+ </html>
